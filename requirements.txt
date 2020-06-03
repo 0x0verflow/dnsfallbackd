@@ -1,0 +1,2 @@
+pyping==0.0.5
+requests==2.23.0
