@@ -11,7 +11,11 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/0x0verflow/dnsfallbackd",
-    packages=setuptools.find_packages(),
+    packages=["dnsfallbackd"],
+    install_requires=[
+        "pyping",
+        "requests"
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: Linux",
