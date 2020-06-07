@@ -17,8 +17,6 @@ echo -n "You're about to install dnsfallbackd on your system including all depen
 read proceed
 
 if [ "$proceed" == "" ] || [ "$proceed" == "y" ] || [ "$proceed" == "Y" ]; then
-  
-
   # --- Getting system up to date
   tput setaf 5
   echo "> apt-get update"
