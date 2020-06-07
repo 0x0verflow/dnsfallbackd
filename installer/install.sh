@@ -73,6 +73,8 @@ if [ "$proceed" == "" ] || [ "$proceed" == "y" ] || [ "$proceed" == "Y" ]; then
   echo "Installing service to /etc/systemd/system/dnsfallbackd.service..."
   tput setaf 7
   
+  adduser dnsfallbackd --no-create-home --disabled-login --disabled-password --shell "/bin/false" --gecos ""
+  
   touch /etc/systemd/system/dnsfallbackd.service
   
   echo "[Unit]" >> /etc/systemd/system/dnsfallbackd.service
@@ -81,6 +83,7 @@ if [ "$proceed" == "" ] || [ "$proceed" == "y" ] || [ "$proceed" == "Y" ]; then
   echo "[Service]" >> /etc/systemd/system/dnsfallbackd.service
   echo "Type=simple" >> /etc/systemd/system/dnsfallbackd.service
   echo "ExecStart=dnsfallbackd" >> /etc/systemd/system/dnsfallbackd.service
+  echo "User=dnsfallbackd" >> /etc/systemd/system/dnsfallbackd.service
   echo "" >> /etc/systemd/system/dnsfallbackd.service
   echo "[Install]" >> /etc/systemd/system/dnsfallbackd.service
   echo "WantedBy=multi-user.target" >> /etc/systemd/system/dnsfallbackd.service
