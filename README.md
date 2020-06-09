@@ -8,6 +8,8 @@ Install dnsfallbackd:
 Uninstall dnsfallbackd:
 ```curl -S https://raw.githubusercontent.com/0x0verflow/dnsfallbackd/master/installer/uninstall.sh | sudo bash```
 
+(currently this only works on apt-based systems. Try clone this repo manually and execute the ``setup.py`` if you're using a non-compatible system)
+
 ## Configuration
 ### Basic configuration
 The dnsfallbackd configuration is located at ``/etc/dnsfallbackd/config.json``. We're using the JSON format due to it's simplicity and easy way of implementation. The config file will look like this:
