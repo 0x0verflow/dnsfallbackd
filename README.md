@@ -1,3 +1,5 @@
+**THIS PROJECT IS CURRENTLY UNTESTED DUE TO ME NOT HAVING ENOUGH SERVERS. THEREFORE CONTRIBUTION IS HIGHLY APPRECIATED**
+
 # dnsfallbackd
 Decentralized daemon to keep your services always accessable through Cloudflare DNS or custom DNS through userscripts
 
