@@ -1,4 +1,4 @@
-**THIS PROJECT IS CURRENTLY UNTESTED DUE TO ME NOT HAVING ENOUGH SERVERS. THEREFORE CONTRIBUTION IS HIGHLY APPRECIATED**
+**THIS PROJECT IS CURRENTLY UNTESTED DUE TO ME NOT HAVING ENOUGH SERVERS! THEREFORE CONTRIBUTION IS HIGHLY APPRECIATED!**
 
 # dnsfallbackd
 Decentralized daemon to keep your services always accessable through Cloudflare DNS or custom DNS through userscripts
@@ -16,7 +16,7 @@ Uninstall dnsfallbackd:
 ### Basic configuration
 The dnsfallbackd configuration is located at ``/etc/dnsfallbackd/config.json``. We're using the JSON format due to it's simplicity and easy way of implementation. The config file will look like this:
 
-```
+```json
 {
     "servers": [ /* Servers with an dnsfallbackd installation */
         "8.8.8.8:42871",
@@ -50,7 +50,7 @@ The "check_interval" defines the seconds between each ping to the other server a
 Now to the modes: 
 A "mode" or userconfig will look like this:
 
-```
+```json
 {
    "requests": [
        {
