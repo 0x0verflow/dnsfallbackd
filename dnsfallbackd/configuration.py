@@ -2,7 +2,7 @@ import json
 import os
 from dnsfallbackd.exceptions import InvalidOrNotDefinedException
 
-# TODO: Bad practise
+# TODO: Bad practice
 default_config = """{
     "servers": [ /* Servers with an dnsfallbackd installation */
         "8.8.8.8:42871",
@@ -13,6 +13,7 @@ default_config = """{
     ],
     "mode": "cloudflare", /* Name of the configuration to use in /etc/dnsfallbackd/userconfigs/ */
     "authentification_key": "mysupersecretauthetificationkey", /* The key that is used by dnsfallbackd to authentificate with other dnsfallbackd servers in your network. Keep this key private at all cost as attackers would be able to edit you dns by using this key */
+    "salt": "mysupersecretsaltdontsharethisoveranunencryptedconnectionyoufuckingidiot",
     "listen_at": "0.0.0.0", /* Where dnsfallbackd will listen for other dnsfallbackd servers in your network */
     "listen_port": "42871",
     "check_interval": 10, /* Check interval in seconds. In this case dnsfallbackd will check other dnsfallbackd servers every 10 seconds */
