@@ -108,7 +108,7 @@ def listen_to_commands(conn, addr):
                         incident_logger.log_incident(f"{ addr } tried to run command { tlc } without identification! This could be an attack!")
 
                 elif tlc is 99: # Incoming Authentification (99||hash)
-                    if encryption.check_key(args[0], configuration.current_configuration["authentification_key"]):
+                    if encryption.check_key(args[0], configuration.current_configuration["authentification_key"], configuration.current_configuration["salt"]):
                         authentificated_connections += conn
                     else:
                         incident_logger.log_incident(f"{ addr } failed to authentificate with dnsfallbackd but failed! This could be an attack!")
