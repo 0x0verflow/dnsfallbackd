@@ -2,7 +2,7 @@ import json
 import os
 from dnsfallbackd.exceptions import InvalidOrNotDefinedException
 
-# TODO: Bad practise
+# TODO: Bad practice
 default_config = """{
     "servers": [ /* Servers with an dnsfallbackd installation */
         "8.8.8.8:42871",
